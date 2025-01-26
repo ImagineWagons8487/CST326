@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
@@ -9,9 +10,12 @@ public class PlayerController : MonoBehaviour
     private float movementX;
     private float movementY;
 
+    private bool grounded;
+
     private int count;
 
     public float speed;
+    private float jumpAmount = 7;
 
     public TextMeshProUGUI countText;
 
@@ -23,6 +27,7 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winTextObject.SetActive(false);
+        grounded = true;
     }
 
     void OnMove(InputValue movementValue)
@@ -30,6 +35,16 @@ public class PlayerController : MonoBehaviour
         Vector2 movementVector = movementValue.Get<Vector2>();
         movementX = movementVector.x;
         movementY = movementVector.y;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && grounded)
+        {
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
+            rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
+            grounded = false;
+        }
     }
 
     private void FixedUpdate()
@@ -62,11 +77,17 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            //gameObject == current Object: 'this'
-            Destroy(gameObject);
-            //update text to lose instead of having another text object
-            winTextObject.SetActive(true);
-            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose.";
+            // //gameObject == current Object: 'this'
+            // Destroy(gameObject);
+            // //update text to lose instead of having another text object
+            // winTextObject.SetActive(true);
+            // winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose.";
         }
+
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+        }
+        
     }
 }

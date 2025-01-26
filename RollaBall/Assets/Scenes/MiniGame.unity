@@ -194,9 +194,10 @@ GameObject:
   - component: {fileID: 92711083}
   - component: {fileID: 92711082}
   - component: {fileID: 92711086}
+  - component: {fileID: 92711087}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,6 +328,27 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: b58b641c217f9b74ea1a5404a224b183, type: 2}
   m_BuildHeightMesh: 0
+--- !u!65 &92711087
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92711081}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 0.02220446, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &151083753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -341,7 +363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.71
+      value: 3.123
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -452,7 +474,7 @@ GameObject:
   - component: {fileID: 201468952}
   m_Layer: 0
   m_Name: DynamicBox Parent
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -742,7 +764,7 @@ GameObject:
   - component: {fileID: 422248166}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -852,7 +874,7 @@ GameObject:
   - component: {fileID: 488294011}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,7 +974,7 @@ GameObject:
   - component: {fileID: 720704830}
   m_Layer: 0
   m_Name: Obstacle (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1060,7 +1082,7 @@ GameObject:
   - component: {fileID: 735514184}
   m_Layer: 0
   m_Name: Obstacle (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1168,7 +1190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.35
+      value: 1.052
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1937,7 +1959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.59
+      value: 2.104
       objectReference: {fileID: 0}
     - target: {fileID: 7024502880772074265, guid: 9e5cc7e61c692df40bd03b6b145674b7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2352,7 +2374,7 @@ GameObject:
   - component: {fileID: 1645149425}
   m_Layer: 0
   m_Name: Obstacle (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
