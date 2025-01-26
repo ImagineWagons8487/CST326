@@ -77,11 +77,11 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // //gameObject == current Object: 'this'
-            // Destroy(gameObject);
-            // //update text to lose instead of having another text object
-            // winTextObject.SetActive(true);
-            // winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose.";
+            //gameObject == current Object: 'this'
+            Destroy(gameObject);
+            //update text to lose instead of having another text object
+            winTextObject.SetActive(true);
+            winTextObject.GetComponent<TextMeshProUGUI>().text = "You Lose.";
         }
 
         if (collision.gameObject.CompareTag("Ground"))
