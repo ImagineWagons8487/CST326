@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour
     private int count;
 
     public float speed;
-    private float jumpAmount = 7;
+    public float jumpAmount = 7;
+    public float dashAmount = 20;
 
     public TextMeshProUGUI countText;
 
@@ -44,6 +45,13 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0, rb.linearVelocity.z);
             rb.AddForce(Vector3.up * jumpAmount, ForceMode.Impulse);
             grounded = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            rb.linearVelocity = new Vector3(0, rb.linearVelocity.y, 0);
+            Vector3 dash = new Vector3(movementX, 0, movementY) * dashAmount;
+            rb.AddForce(dash);
         }
     }
 

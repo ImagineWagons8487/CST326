@@ -2433,6 +2433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  jumpAmount: 7
+  dashAmount: 200
   countText: {fileID: 1731255311}
   winTextObject: {fileID: 1970525374}
 --- !u!114 &1553218800
