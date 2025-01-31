@@ -4,13 +4,15 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreHandler : MonoBehaviour
 {
-    public float score;
+    public float scoreFlat;
+    public float scoreMult;
     
     public TextMeshProUGUI scoreText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        score = 50;
+        scoreFlat = 50;
+        scoreMult = 1;
         updateScoreText();
     }
 
@@ -22,6 +24,7 @@ public class ScoreHandler : MonoBehaviour
 
     void updateScoreText()
     {
-        scoreText.text = "Score: " + score.ToString();
+        float score = scoreFlat * scoreMult;
+        scoreText.text = scoreFlat.ToString() + " x " + scoreMult.ToString() + "\nScore: " + score.ToString();
     }
 }
